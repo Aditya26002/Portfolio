@@ -90,7 +90,9 @@ const Projects = () => {
         <Desc>Here are some of the projects I have worked on.</Desc>
 
         <ToogleGroup>
-          <ToggleButton>Web</ToggleButton>
+          <ToggleButton>All</ToggleButton>
+          <ToggleButton>Website</ToggleButton>
+          <ToggleButton>Application</ToggleButton>
           <Divider />
         </ToogleGroup>
       </Wrapper>

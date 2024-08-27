@@ -23,6 +23,7 @@ const Card = styled.div`
   box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   padding: 26px 20px;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   gap: 14px;

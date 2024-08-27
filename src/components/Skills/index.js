@@ -3,23 +3,26 @@ import styled from "styled-components";
 import { skills } from "../../data/constants";
 
 const Container = styled.div`
-display: flex;
-flex-wrap: wrap; /* Enable wrapping */
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`
   position: relative;
   display: flex;
-  flex-wrap: wrap; /* Enable wrapping for responsive layout */
-  justify-content: center; /* Center content horizontally */
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  max-width: 1100px;
   gap: 12px;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
 `;
 
 export const Title = styled.div`
@@ -47,29 +50,27 @@ export const Desc = styled.div`
 const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-wrap: wrap; /* Enable wrapping for responsive layout */
+  flex-wrap: wrap;
   margin-top: 30px;
   gap: 30px;
-  justify-content: center; /* Distribute skills evenly */
+  justify-content: center;
 `;
 
 const Skill = styled.div`
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   background: ${({ theme }) => theme.card};
   border: 0.1px solid #854ce6;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
   @media (max-width: 768px) {
-    width: calc(100% - 30px);
-    padding: 12px 24px;
+    max-width: 400px;
+    padding: 10px 36px;
   }
-
-  &:hover {
-    box-shadow: rgba(23, 92, 230, 0.25) 0px 12px 36px;
-    transform: translateY(-4px);
-    transition: all 0.3s ease;
+  @media (max-width: 500px) {
+    max-width: 330px;
+    padding: 10px 36px;
   }
 `;
 
@@ -102,7 +103,12 @@ const SkillItem = styled.div`
   gap: 8px;
   @media (max-width: 768px) {
     font-size: 14px;
-    padding
+    padding: 8px 12px;
+  }
+  @media (max-width: 500px) {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 `;
 
 const SkillImage = styled.img`
